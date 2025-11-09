@@ -4,7 +4,7 @@ export default function Work() {
   const workExperience = [
     {
       company: {
-        name: "SkillRank.io",
+        name: "Skillrank.io",
         duration: "Aug 2024 - Present",
         role: "Software Engineer",
       },
