@@ -26,19 +26,18 @@ export default function Home() {
           </div>
           <div className="text-4xl sm:text-5xl font-normal leading-tight">
             <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 inline-block text-transparent bg-clip-text">
-              {" "}
-              Software
+              Software Engineering
             </span>{" "}
-            developer, passionate
+            Intern
             <br />
             <span>
-              about{" "}
+              Building{" "}
               <span className="bg-gradient-to-r leading-normal from-orange-300 via-orange-400 to-orange-500 inline-block text-transparent bg-clip-text">
-                photography
+                innovative solutions
               </span>{" "}
-              and{" "}
+              with{" "}
               <span className="bg-gradient-to-r from-blue-300 via-orange-300 to-red-300 inline-block text-transparent bg-clip-text">
-                books.
+                modern tech.
               </span>
             </span>
           </div>
@@ -58,7 +57,7 @@ export default function Home() {
               onClick={handleDownload}
               className="px-4 py-2 bg-white text-black border border-gray-500 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-black-600 focus:ring-opacity-75"
             >
-              Resume
+              Download CV
             </button>
           </div>
         </div>

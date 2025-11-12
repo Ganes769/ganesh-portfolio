@@ -41,9 +41,15 @@ export default function Navigation() {
       </NavLink>
       <NavLink
         className={({ isActive }) => (isActive ? navigationBottom : "")}
+        to="/projects"
+      >
+        Projects
+      </NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? navigationBottom : "")}
         to="/work"
       >
-        Work
+        Experience
       </NavLink>
     </nav>
   );

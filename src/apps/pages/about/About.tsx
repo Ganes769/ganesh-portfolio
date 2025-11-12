@@ -13,33 +13,40 @@ export default function About() {
     <Container>
       <div>
         <div className="mb-5">
-          <p className="text-3xl leading-1  ">Hi, I'm Ganesh Gnawali</p>
+          <p className="text-3xl leading-1">Hi, I'm Ganesh Gnawali</p>
           <span className="font-light text-gray-600">
-            a Software Developer trying to make the world a bit more functional.
+            Software Engineering Intern | Building Scalable Web Applications
           </span>
-          🇳🇵
+          🇳🇵 🇬🇧
         </div>
         <p className="leading-1">
-          Highly motivated and results-driven software developer with 3.5 years
-          of experience in the software development lifecycle. Eager to leverage
-          technical expertise, creativity, and a passion for continuous learning
-          to contribute effectively and make a meaningful impact in a
-          challenging role.
+          Aspiring software engineer with hands-on experience in full-stack development,
+          actively seeking opportunities in the UK tech industry. With over a year of
+          professional experience building production-ready applications using React,
+          TypeScript, and modern web technologies, I'm passionate about writing clean,
+          maintainable code and solving complex technical challenges.
         </p>
         <p className="leading-1 mt-2">
-          Outside of coding and programming, I enjoy spending my free time
-          reading books. I aim to read at least one book a month to broaden my
-          knowledge and gain new perspectives. I also love trekking and
-          exploring nature, which fuels my passion for photography. You can
-          check out some of the pictures I have clicked on my{" "}
+          Throughout my internship and work experience, I've contributed to real-world projects
+          including recruitment platforms and time management systems. I specialise in frontend
+          development whilst maintaining a strong understanding of backend technologies, RESTful
+          APIs, and database management. I'm particularly interested in working with companies
+          that value innovation, continuous learning, and best coding practices.
+        </p>
+        <p className="leading-1 mt-2">
+          Beyond coding, I'm an avid reader who aims to finish at least one book per month to
+          broaden my perspectives. I also enjoy trekking and photography, which you can view on
+          my{" "}
           <a
-            className="text-blue-600"
+            className="text-blue-600 hover:underline"
             href="https://www.pexels.com/@lostsoul16/"
             target="_blank"
+            rel="noopener noreferrer"
           >
-            pexels profile
+            Pexels profile
           </a>
-          .
+          . These hobbies help me maintain a healthy work-life balance and bring fresh
+          perspectives to problem-solving.
         </p>
       </div>
       {/* Skills Section */}
