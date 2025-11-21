@@ -26,9 +26,8 @@ export default function Home() {
           </div>
           <div className="text-4xl sm:text-5xl font-normal leading-tight">
             <span className="bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 inline-block text-transparent bg-clip-text">
-              Software Engineering
-            </span>{" "}
-            Intern
+              Software Engineer
+            </span>
             <br />
             <span>
               Building{" "}
