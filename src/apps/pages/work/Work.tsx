@@ -5,7 +5,7 @@ export default function Work() {
     {
       company: {
         name: "Skillrank.io",
-        duration: "Aug 2024 - Present",
+        duration: "Dec 2024 - Present",
         role: "Software Engineer",
       },
       contribute: [
@@ -19,7 +19,7 @@ export default function Work() {
     {
       company: {
         name: "LogicaBeans Pvt. Ltd.",
-        duration: "Apr 2024 - Aug 2024",
+        duration: "May 2024 - Sept 2024",
         role: "Frontend Developer Intern",
       },
       contribute: [
@@ -33,9 +33,12 @@ export default function Work() {
   return (
     <Container>
       <div>
-        <p className="text-2xl leading-1 mb-3 capitalize ml-1">Work Experience</p>
+        <p className="text-2xl leading-1 mb-3 capitalize ml-1">
+          Work Experience
+        </p>
         <p className="mb-6 text-gray-600">
-          Professional experience building scalable web applications and mobile solutions.
+          Professional experience building scalable web applications and mobile
+          solutions.
         </p>
         {workExperience.map((it, index) => (
           <TimeLine
