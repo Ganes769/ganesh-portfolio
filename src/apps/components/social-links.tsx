@@ -13,7 +13,7 @@ export const SocialLink = ({ SocialData }: socialLinksTypes) => {
           href={soc.url}
           target={soc.url.includes("mailto") ? "_self" : "_blank"}
           rel="noopener noreferrer"
-          className="cursor-pointer transform transition-transform duration-300 hover:scale-110"
+          className="cursor-pointer text-black transform transition-transform duration-300 hover:scale-110 [&>svg]:text-black"
         >
           {soc.icon}
         </a>

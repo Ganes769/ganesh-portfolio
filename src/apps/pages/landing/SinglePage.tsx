@@ -5,6 +5,7 @@ import TimeLine from "@components/timeline";
 import { EducationTimeLine } from "@components/education-timeline";
 import { SocialLink } from "@components/social-links";
 import ScrollFadeInUp from "@components/scroll-fade-in-up";
+import NowSection from "@components/now-section";
 import {
   dataBase,
   otherTools,
@@ -394,68 +395,100 @@ export default function SinglePage() {
       {/* Projects */}
       <section
         id={SECTION_IDS.projects}
-        className="py-12 sm:py-16 bg-white border-b border-gray-200 overflow-hidden"
+        className="py-14 sm:py-20 bg-gray-50 border-b border-gray-200 overflow-hidden"
       >
-        <Container>
+        <Container className="max-w-5xl">
           <ScrollFadeInUp>
-            <h2 className="text-2xl sm:text-3xl font-bold text-black mb-2">
-              Projects
-            </h2>
-            <p className="text-gray-600 mb-6 max-w-2xl text-sm">
-              Hands-on work across web, mobile, and full-stack. Relevant for UK
-              early-career roles.
-            </p>
+            <div className="mb-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-2">
+                Projects
+              </h2>
+              <p className="text-gray-600 max-w-xl text-sm sm:text-base leading-relaxed">
+                Hands-on work across web, mobile, and full-stack. Relevant for
+                UK early-career roles.
+              </p>
+              <div
+                className="mt-4 h-0.5 w-12 bg-black rounded-full"
+                aria-hidden
+              />
+            </div>
           </ScrollFadeInUp>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {projects.map((project, index) => (
-              <ScrollFadeInUp key={index} delay={index * 0.04}>
-                <article className="bg-gray-50 rounded-lg border border-gray-200 border-l-2 border-l-black p-4 hover:border-gray-300 transition-colors">
-                  <div className="flex items-start justify-between gap-2 mb-2">
-                    <h3 className="font-bold text-black text-sm sm:text-base leading-tight">
+              <ScrollFadeInUp key={index} delay={index * 0.06}>
+                <article className="group h-full flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300 overflow-hidden">
+                  <div className="flex flex-col h-full p-5 sm:p-6 border-l-4 border-l-black">
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-gray-500 border border-gray-200 rounded px-2 py-1">
+                        {project.type}
+                      </span>
+                      <div className="flex items-center gap-1 shrink-0">
+                        {project.metric && (
+                          <span className="text-xs font-bold text-gray-600 bg-gray-100 px-2 py-1 rounded">
+                            {project.metric}
+                          </span>
+                        )}
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-lg text-gray-500 hover:text-black hover:bg-gray-100 transition-colors"
+                            aria-label="GitHub"
+                          >
+                            <FaGithub size={16} />
+                          </a>
+                        )}
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-lg text-gray-500 hover:text-black hover:bg-gray-100 transition-colors"
+                            aria-label="Live site"
+                          >
+                            <FaExternalLinkAlt size={14} />
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                    <h3 className="font-bold text-black text-lg sm:text-xl leading-snug mb-1 group-hover:text-gray-800 transition-colors">
                       {project.title}
                     </h3>
-                    <div className="flex gap-1 shrink-0">
-                      {project.githubUrl && (
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-black p-1"
-                          aria-label="GitHub"
-                        >
-                          <FaGithub size={14} />
-                        </a>
-                      )}
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-400 hover:text-black p-1"
-                          aria-label="Live site"
-                        >
-                          <FaExternalLinkAlt size={12} />
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                  <p className="text-gray-600 text-xs leading-snug mb-3 line-clamp-2">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.technologies.slice(0, 4).map((tech, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-0.5 text-xs font-medium rounded bg-gray-200 text-gray-800"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                    {project.technologies.length > 4 && (
-                      <span className="px-2 py-0.5 text-xs text-gray-500">
-                        +{project.technologies.length - 4}
-                      </span>
+                    <p className="text-gray-500 text-xs sm:text-sm font-medium mb-3">
+                      {project.tagline}
+                    </p>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+                      {project.description}
+                    </p>
+                    {project.highlights.length > 0 && (
+                      <ul className="space-y-1.5 mb-4">
+                        {project.highlights.slice(0, 2).map((h, i) => (
+                          <li
+                            key={i}
+                            className="flex gap-2 text-xs sm:text-sm text-gray-600"
+                          >
+                            <span
+                              className="text-black shrink-0 mt-0.5"
+                              aria-hidden
+                            >
+                              ✓
+                            </span>
+                            <span>{h}</span>
+                          </li>
+                        ))}
+                      </ul>
                     )}
+                    <div className="flex flex-wrap gap-2 pt-3 border-t border-gray-100">
+                      {project.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="px-2.5 py-1 text-xs font-medium rounded-md bg-gray-100 text-gray-800 border border-gray-200"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </article>
               </ScrollFadeInUp>
