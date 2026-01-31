@@ -30,7 +30,7 @@ export default function ScrollFadeInUp({
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true);
       },
-      { threshold, rootMargin: "0px 0px -40px 0px" }
+      { threshold, rootMargin: "0px 0px -40px 0px" },
     );
     observer.observe(el);
     return () => observer.disconnect();

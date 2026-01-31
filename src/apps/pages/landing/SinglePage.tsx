@@ -12,6 +12,7 @@ import {
   skills,
   versionControl,
   socialLinks,
+  contactDetails,
 } from "@constants/content";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
@@ -202,11 +203,11 @@ export default function SinglePage() {
       {/* Intro */}
       <section
         id={SECTION_IDS.intro}
-        className="min-h-[90vh] flex items-center justify-center px-4 py-16 sm:py-24 bg-white border-b border-gray-200"
+        className="min-h-[90vh] flex items-center justify-center px-4 pt-6 pb-12 sm:pt-8 sm:pb-16 bg-white border-b border-gray-200"
       >
-        <Container className="!m-0 !p-4 sm:!p-6 md:!mx-auto max-w-4xl">
-          <div className="flex flex-col items-center text-center">
-            <ScrollFadeInUp duration={0.7} offsetY={20}>
+        <Container className="!m-0 !p-4 sm:!p-6 md:!mx-auto max-w-4xl !pt-2 sm:!pt-4">
+          <div className="flex flex-col items-center text-center -mt-4 sm:-mt-6">
+            <ScrollFadeInUp startVisible duration={0.7} offsetY={20}>
               <div className="w-full flex justify-center mb-6">
                 <img
                   src={Profile}
@@ -215,7 +216,12 @@ export default function SinglePage() {
                 />
               </div>
             </ScrollFadeInUp>
-            <ScrollFadeInUp delay={0.1} duration={0.6} offsetY={16}>
+            <ScrollFadeInUp
+              startVisible
+              delay={0.1}
+              duration={0.6}
+              offsetY={16}
+            >
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-black">
                 Ganesh Gnawali
                 <br />
@@ -224,38 +230,46 @@ export default function SinglePage() {
                 </span>
               </h1>
             </ScrollFadeInUp>
-            <ScrollFadeInUp delay={0.15} duration={0.6} offsetY={16}>
+            <ScrollFadeInUp
+              startVisible
+              delay={0.15}
+              duration={0.6}
+              offsetY={16}
+            >
               <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed max-w-2xl">
                 {PROFESSIONAL_SUMMARY}
               </p>
             </ScrollFadeInUp>
-            <ScrollFadeInUp delay={0.2} duration={0.6} offsetY={16}>
+            <ScrollFadeInUp
+              startVisible
+              delay={0.2}
+              duration={0.6}
+              offsetY={16}
+            >
               <p className="mt-3 text-gray-500 text-sm sm:text-base max-w-xl">
                 Building scalable web & mobile solutions · Based in the UK ·
                 Seeking early-career and graduate roles
               </p>
             </ScrollFadeInUp>
-            <ScrollFadeInUp delay={0.3} duration={0.5}>
-              <div className="mt-6 mb-8">
+            <ScrollFadeInUp startVisible delay={0.3} duration={0.5}>
+              <div className="mt-2 mb-4">
                 <SocialLink SocialData={socialLinks} />
               </div>
             </ScrollFadeInUp>
-            <ScrollFadeInUp delay={0.35} duration={0.5}>
-              <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
-                <a
-                  href={`#${SECTION_IDS.contact}`}
-                  className="px-5 py-2.5 rounded-lg bg-black text-white font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors"
-                >
-                  Get in touch
-                </a>
-                <button
-                  onClick={handleDownloadCV}
-                  className="px-5 py-2.5 rounded-lg border-2 border-gray-300 text-black font-medium hover:border-black hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors"
-                >
-                  Download CV
-                </button>
-              </div>
-            </ScrollFadeInUp>
+            <div className="flex flex-nowrap justify-center items-center gap-3 sm:gap-4">
+              <a
+                href={`#${SECTION_IDS.contact}`}
+                className="shrink-0 px-5 py-2.5 rounded-lg bg-black text-white font-medium hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors"
+              >
+                Get in touch
+              </a>
+              <button
+                onClick={handleDownloadCV}
+                className="shrink-0 px-5 py-2.5 rounded-lg border-2 border-gray-300 text-black font-medium hover:border-black hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 transition-colors"
+              >
+                Download CV
+              </button>
+            </div>
           </div>
         </Container>
       </section>
@@ -404,13 +418,8 @@ export default function SinglePage() {
                 Projects
               </h2>
               <p className="text-gray-600 max-w-xl text-sm sm:text-base leading-relaxed">
-                Hands-on work across web, mobile, and full-stack. Relevant for
-                UK early-career roles.
+                Hands-on work across web, mobile, and full-stack.
               </p>
-              <div
-                className="mt-4 h-0.5 w-12 bg-black rounded-full"
-                aria-hidden
-              />
             </div>
           </ScrollFadeInUp>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -511,7 +520,35 @@ export default function SinglePage() {
               I'm open to early-career and graduate software engineering roles
               in the UK. Reach out via email or LinkedIn.
             </p>
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {contactDetails.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  target={
+                    item.href.startsWith("mailto") ||
+                    item.href.startsWith("tel")
+                      ? "_self"
+                      : "_blank"
+                  }
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 sm:p-5 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300 group"
+                >
+                  <span className="shrink-0 p-2 rounded-lg bg-gray-100 text-black group-hover:bg-gray-200 transition-colors">
+                    {item.icon}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-0.5">
+                      {item.label}
+                    </p>
+                    <p className="text-sm font-medium text-black break-all">
+                      {item.value}
+                    </p>
+                  </div>
+                </a>
+              ))}
+            </div>
+            <div className="mt-8 flex flex-wrap items-center gap-6">
               <SocialLink SocialData={socialLinks} />
             </div>
             <div className="mt-8 pt-8 border-t border-gray-200">

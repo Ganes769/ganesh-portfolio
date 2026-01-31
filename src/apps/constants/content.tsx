@@ -1,4 +1,4 @@
-import { FaReact, FaSass, FaAws } from "react-icons/fa";
+import { FaReact, FaSass, FaAws, FaGithub } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa6";
 import {
   TbBrandBitbucket,
@@ -32,7 +32,7 @@ import { BiLogoGraphql } from "react-icons/bi";
 import { FaPython } from "react-icons/fa";
 
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdPhone } from "react-icons/md";
 export const dataBase = [
   {
     name: "MySql",
@@ -184,10 +184,43 @@ export const otherTools = [
 ];
 
 export const socialLinks = [
-  { icon: <MdEmail size={22} color="#000000" />, url: "mailto:ganeshsnawali@gmail.com" },
-  { icon: <IoLogoGithub size={22} color="#000000" />, url: "https://github.com/Ganes769" },
+  {
+    icon: <MdEmail size={22} color="#000000" />,
+    url: "mailto:ganeshsnawali@gmail.com",
+  },
+  {
+    icon: <IoLogoGithub size={22} color="#000000" />,
+    url: "https://github.com/Ganes769",
+  },
   {
     icon: <IoLogoLinkedin size={22} color="#000000" />,
     url: "https://www.linkedin.com/in/ganesh-gnawali-5638181a0/",
+  },
+];
+
+export const contactDetails = [
+  {
+    label: "Email",
+    value: "ganeshsnawali@gmail.com",
+    href: "mailto:ganeshsnawali@gmail.com",
+    icon: <MdEmail size={24} color="#000000" />,
+  },
+  {
+    label: "LinkedIn",
+    value: "linkedin.com/in/ganesh-gnawali-5638181a0",
+    href: "https://www.linkedin.com/in/ganesh-gnawali-5638181a0/",
+    icon: <IoLogoLinkedin size={24} color="#000000" />,
+  },
+  {
+    label: "Phone",
+    value: "+44 7350142084",
+    href: "tel:+447350142084",
+    icon: <MdPhone size={24} color="#000000" />,
+  },
+  {
+    label: "Github",
+    value: "+44 7350142084",
+    href: "https://github.com/Ganes769",
+    icon: <FaGithub size={24} color="#000000" />,
   },
 ];
