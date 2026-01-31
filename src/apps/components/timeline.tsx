@@ -6,47 +6,28 @@ type TimeLineProps = {
   };
   contribute: string[];
 };
-export default function TimeLine({
-  company,
-  contribute,
-}: TimeLineProps) {
+
+export default function TimeLine({ company, contribute }: TimeLineProps) {
   return (
-    <>
-      <div className="flex gap-x-3 relative group rounded-lg hover:bg-gray-100 dark:hover:bg-grey/10">
-        {/* <a className="z-[1] absolute inset-0" href="#"></a> */}
-        <div className="relative last:after:hidden after:absolute after:top-0 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-gray-200 dark:after:bg-neutral-700 dark:group-hover:after:bg-neutral-600">
-          <div className="relative z-10 size-7 flex justify-center items-center">
-            <div className="size-2 rounded-full bg-white border-2 border-gray-300 group-hover:border-gray-600 dark:bg-neutral-800 dark:border-neutral-600 dark:group-hover:border-neutral-600"></div>
-          </div>
-        </div>
-        <div className="grow p-2 pb-8">
-          <h3 className=" gap-x-1.5 font-medium text-gray-800 dark:text-black">
-            <div className="flex justify-between mb-1">
-              <span> {company.name}</span>
-              <span> {company.duration} </span>
-            </div>
-            <p className="text-xs font-medium capitalize text-gray-500 dark:text-neutral-00 flex justify-between">
-              <span> {company.role} </span>
-            </p>
-          </h3>
-          <button
-            type="button"
-            className="mt-1 -ms-1 p-1 relative z-10 inline-flex items-center gap-x-2 text-xs rounded-lg border border-transparent text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:text-neutral-400 "
-          >
-            <ul className="list-disc">
-              {
-                contribute.map((it, index) => {
-                  return (
-                    <li className="text-start" key={index}>
-                      {it}
-                    </li>
-                  );
-                })
-              }
-            </ul>
-          </button>
-        </div>
+    <div className="flex gap-4 py-5 border-b border-gray-200 last:border-0 last:pb-0 first:pt-0">
+      <div className="flex flex-col items-center shrink-0">
+        <div className="w-3 h-3 rounded-full bg-black border-2 border-black shrink-0 mt-1.5" />
+        <div className="w-px flex-1 min-h-[20px] bg-gray-300 mt-1" aria-hidden />
       </div>
-    </>
+      <div className="grow min-w-0 pb-1">
+        <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+          <span className="font-bold text-black">{company.name}</span>
+          <span className="text-xs text-gray-500 whitespace-nowrap">{company.duration}</span>
+        </div>
+        <p className="text-xs font-medium text-gray-600 uppercase tracking-wide mb-2">
+          {company.role}
+        </p>
+        <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+          {contribute.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
