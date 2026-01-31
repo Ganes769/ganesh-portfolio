@@ -2,10 +2,8 @@ import Profile from "@assets/profile.jpg";
 import Container from "@components/container";
 import GridContainer from "@components/grid-container";
 import TimeLine from "@components/timeline";
-import { EducationTimeLine } from "@components/education-timeline";
 import { SocialLink } from "@components/social-links";
 import ScrollFadeInUp from "@components/scroll-fade-in-up";
-import NowSection from "@components/now-section";
 import {
   dataBase,
   otherTools,
@@ -21,6 +19,7 @@ const SECTION_IDS = {
   about: "about",
   skills: "skills",
   experience: "experience",
+  education: "education",
   projects: "projects",
   contact: "contact",
 } as const;
@@ -275,32 +274,6 @@ export default function SinglePage() {
       </section>
 
       {/* About */}
-      <section
-        id={SECTION_IDS.about}
-        className="py-12 sm:py-16 bg-gray-50 border-b border-gray-200"
-      >
-        <Container>
-          <ScrollFadeInUp>
-            <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
-              About me
-            </h2>
-            <p className="text-gray-600 text-sm sm:text-base mb-2">
-              Software Engineer · UK-based · Graduate from University of East
-              London
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              I specialise in frontend development with React and TypeScript,
-              with hands-on experience across the full software development
-              lifecycle. I have contributed to real-world projects including
-              recruitment platforms and time management systems, and I am
-              actively seeking early-career and graduate opportunities in the UK
-              tech industry. I focus on clean, maintainable code, Agile
-              practices, and continuous learning—particularly for roles in the
-              UK market.
-            </p>
-          </ScrollFadeInUp>
-        </Container>
-      </section>
 
       {/* Skills */}
       <section
@@ -366,7 +339,7 @@ export default function SinglePage() {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-gray-50 p-4 rounded-lg border border-gray-200"
+                  className="bg-white p-4 rounded-lg border border-gray-200"
                 >
                   <h4 className="font-bold text-black mb-1">{item.title}</h4>
                   <p className="text-sm text-gray-600">{item.desc}</p>
@@ -380,7 +353,7 @@ export default function SinglePage() {
       {/* Experience & Education */}
       <section
         id={SECTION_IDS.experience}
-        className="py-12 sm:py-16 bg-gray-50 border-b border-gray-200"
+        className="py-12 sm:py-16 bg-white border-b border-gray-200"
       >
         <Container>
           <ScrollFadeInUp>
@@ -400,8 +373,10 @@ export default function SinglePage() {
             ))}
           </div>
           <ScrollFadeInUp delay={0.15}>
-            <h3 className="font-bold text-black mt-12 mb-6">Education</h3>
-            <EducationTimeLine />
+            <div id={SECTION_IDS.education}>
+              <h3 className="font-bold text-black mt-12 mb-6">Education</h3>
+              {/* <EducationTimeLine /> */}
+            </div>
           </ScrollFadeInUp>
         </Container>
       </section>
@@ -409,7 +384,7 @@ export default function SinglePage() {
       {/* Projects */}
       <section
         id={SECTION_IDS.projects}
-        className="py-14 sm:py-20 bg-gray-50 border-b border-gray-200 overflow-hidden"
+        className="py-14 sm:py-20 bg-white border-b border-gray-200 overflow-hidden"
       >
         <Container className="max-w-5xl">
           <ScrollFadeInUp>
@@ -509,7 +484,7 @@ export default function SinglePage() {
       {/* Contact */}
       <section
         id={SECTION_IDS.contact}
-        className="py-12 sm:py-16 bg-gray-50 border-b border-gray-200"
+        className="py-12 sm:py-16 bg-white border-b border-gray-200"
       >
         <Container>
           <ScrollFadeInUp>

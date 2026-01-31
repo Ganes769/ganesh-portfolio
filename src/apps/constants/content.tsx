@@ -219,7 +219,7 @@ export const contactDetails = [
   },
   {
     label: "Github",
-    value: "+44 7350142084",
+    value: "Github/ganesh769",
     href: "https://github.com/Ganes769",
     icon: <FaGithub size={24} color="#000000" />,
   },
