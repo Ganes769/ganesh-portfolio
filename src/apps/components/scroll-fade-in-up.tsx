@@ -28,7 +28,7 @@ export default function ScrollFadeInUp({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
+        setIsVisible(entry.isIntersecting);
       },
       { threshold, rootMargin: "0px 0px -40px 0px" },
     );
