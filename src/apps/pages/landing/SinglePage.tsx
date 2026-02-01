@@ -206,7 +206,7 @@ export default function SinglePage() {
       >
         <Container className="!m-0 !p-4 sm:!p-6 md:!mx-auto max-w-4xl !pt-2 sm:!pt-4">
           <div className="flex flex-col items-center text-center -mt-4 sm:-mt-6">
-            <ScrollFadeInUp startVisible duration={0.7} offsetY={20}>
+            <ScrollFadeInUp duration={0.7} offsetY={20}>
               <div className="w-full flex justify-center mb-6">
                 <img
                   src={Profile}
@@ -215,12 +215,7 @@ export default function SinglePage() {
                 />
               </div>
             </ScrollFadeInUp>
-            <ScrollFadeInUp
-              startVisible
-              delay={0.1}
-              duration={0.6}
-              offsetY={16}
-            >
+            <ScrollFadeInUp delay={0.1} duration={0.6} offsetY={16}>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-black">
                 Ganesh Gnawali
                 <br />
@@ -229,28 +224,18 @@ export default function SinglePage() {
                 </span>
               </h1>
             </ScrollFadeInUp>
-            <ScrollFadeInUp
-              startVisible
-              delay={0.15}
-              duration={0.6}
-              offsetY={16}
-            >
+            <ScrollFadeInUp delay={0.15} duration={0.6} offsetY={16}>
               <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed max-w-2xl">
                 {PROFESSIONAL_SUMMARY}
               </p>
             </ScrollFadeInUp>
-            <ScrollFadeInUp
-              startVisible
-              delay={0.2}
-              duration={0.6}
-              offsetY={16}
-            >
+            <ScrollFadeInUp delay={0.2} duration={0.6} offsetY={16}>
               <p className="mt-3 text-gray-500 text-sm sm:text-base max-w-xl">
                 Building scalable web & mobile solutions · Based in the UK ·
                 Seeking early-career and graduate roles
               </p>
             </ScrollFadeInUp>
-            <ScrollFadeInUp startVisible delay={0.3} duration={0.5}>
+            <ScrollFadeInUp delay={0.3} duration={0.5}>
               <div className="mt-2 mb-4">
                 <SocialLink SocialData={socialLinks} />
               </div>
