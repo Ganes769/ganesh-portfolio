@@ -1,4 +1,5 @@
 import Footer from "@components/footer";
+import PhotographyHobbyPopup from "@components/photography-hobby-popup";
 import Navigation from "./apps/navigation/nagivation";
 import SinglePage from "./apps/pages/landing/SinglePage";
 import "./App.css";
@@ -9,6 +10,7 @@ function App() {
       <Navigation />
       <SinglePage />
       <Footer />
+      <PhotographyHobbyPopup />
     </div>
   );
 }
