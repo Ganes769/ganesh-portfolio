@@ -360,7 +360,6 @@ export default function SinglePage() {
           <ScrollFadeInUp delay={0.15}>
             <div id={SECTION_IDS.education}>
               <h3 className="font-bold text-black mt-12 mb-6">Education</h3>
-              {/* <EducationTimeLine /> */}
             </div>
           </ScrollFadeInUp>
         </Container>
