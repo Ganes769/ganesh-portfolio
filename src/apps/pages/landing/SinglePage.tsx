@@ -57,6 +57,25 @@ const workExperience = [
   },
 ];
 
+const education = [
+  {
+    company: {
+      name: "University of East London",
+      duration: "May 2025 – May 2026",
+      role: "Masters of Science in Computer Science",
+    },
+    contribute: ["London, United Kingdom"],
+  },
+  {
+    company: {
+      name: "Tribhuvan University",
+      duration: "Jan 2019 – Jan 2025",
+      role: "Bachelor in Computer Science",
+    },
+    contribute: ["Butwal, Nepal"],
+  },
+];
+
 type Project = {
   title: string;
   tagline: string;
@@ -357,11 +376,24 @@ export default function SinglePage() {
               </ScrollFadeInUp>
             ))}
           </div>
-          <ScrollFadeInUp delay={0.15}>
-            <div id={SECTION_IDS.education}>
-              <h3 className="font-bold text-black mt-12 mb-6">Education</h3>
+
+          <ScrollFadeInUp delay={0.12}>
+            <div id={SECTION_IDS.education} className="mt-12">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-2">
+                Education
+              </h2>
+              <p className="text-gray-600 mb-8">
+                Academic background in computer science and software development.
+              </p>
             </div>
           </ScrollFadeInUp>
+          <div className="space-y-0">
+            {education.map((it, index) => (
+              <ScrollFadeInUp key={index} delay={0.12 + index * 0.06}>
+                <TimeLine company={it.company} contribute={it.contribute} />
+              </ScrollFadeInUp>
+            ))}
+          </div>
         </Container>
       </section>
 
