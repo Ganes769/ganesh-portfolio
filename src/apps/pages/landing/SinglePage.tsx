@@ -91,6 +91,50 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "DevPilot Repository Assistant",
+    tagline: "FastAPI + Qdrant + Ollama for code Q&A",
+    description:
+      "FastAPI-based repository assistant that scans source files, chunks content, generates embeddings, stores vectors in Qdrant, and answers natural-language codebase questions with Ollama.",
+    type: "Full-stack",
+    technologies: [
+      "FastAPI",
+      "Pydantic",
+      "Qdrant",
+      "sentence-transformers",
+      "Ollama",
+      "Typer",
+    ],
+    highlights: [
+      "Built end-to-end indexing flow: scan, safe read, chunk, embed, and store vectors",
+      "Implemented semantic retrieval with score filtering and contextual answers",
+      "Added CLI commands to index repositories and ask questions from terminal",
+      "Returned source-aware answers with relevant file references",
+    ],
+    accent: "indigo",
+  },
+  {
+    title: "Cloudinary-like Image Processing Backend",
+    tagline: "JWT-secured upload, transform, and retrieval APIs",
+    description:
+      "Backend image processing platform that supports authenticated uploads, on-demand transformations, and efficient image retrieval in multiple formats with metadata and pagination.",
+    type: "Full-stack",
+    technologies: [
+      "Node.js",
+      "Express",
+      "JWT",
+      "Image Processing",
+      "Cloud Storage",
+      "REST API",
+    ],
+    highlights: [
+      "Implemented user registration and login with JWT-protected image endpoints",
+      "Built image upload, listing, metadata, and paginated retrieval APIs",
+      "Added transformations such as resize, crop, rotate, watermark, filters, and format conversion",
+      "Designed for caching and rate limiting to improve performance and prevent abuse",
+    ],
+    accent: "amber",
+  },
+  {
     title: "SkillRank Recruitment Platform",
     tagline: "Automating hiring from assessment to shortlist",
     description:

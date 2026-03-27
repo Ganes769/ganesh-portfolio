@@ -13,6 +13,45 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = [
     {
+      title: "DevPilot Repository Assistant",
+      description:
+        "FastAPI-based repository assistant that scans source files, chunks content, generates embeddings, stores vectors in Qdrant, and answers natural-language codebase questions using Ollama.",
+      technologies: [
+        "FastAPI",
+        "Pydantic",
+        "Qdrant",
+        "sentence-transformers",
+        "Ollama",
+        "AI",
+        "LLM",
+      ],
+      highlights: [
+        "Built end-to-end indexing flow for scanning, safe file reading, chunking, embedding, and vector storage",
+        "Implemented semantic retrieval with score filtering and contextual answering through Ollama",
+        "Created CLI commands to index repositories and ask questions directly from terminal",
+        "Added source-aware responses that return answer text with relevant file references",
+      ],
+    },
+    {
+      title: "Cloudinary-like Image Processing Backend",
+      description:
+        "Backend service for authenticated image upload, transformation, and retrieval with metadata, pagination, and multi-format delivery.",
+      technologies: [
+        "Node.js",
+        "Express",
+        "JWT",
+        "Image Processing",
+        "Cloud Storage",
+        "REST API",
+      ],
+      highlights: [
+        "Implemented secure user authentication with sign-up, login, and JWT-protected endpoints",
+        "Built upload and list APIs with image metadata and paginated responses",
+        "Supported transformations including resize, crop, rotate, watermark, filters, and format conversion",
+        "Improved reliability with validation, error handling, caching, and rate limiting",
+      ],
+    },
+    {
       title: "SkillRank Recruitment Platform",
       description:
         "Comprehensive web application designed to streamline the recruitment process by automating candidate assessments and evaluations.",
@@ -34,32 +73,6 @@ export default function Projects() {
         "Implemented real-time alert and notification systems",
         "Ensured responsive design across various device sizes",
         "Optimised performance for smooth user experience",
-      ],
-    },
-    {
-      title: "Time Management System with Rich Text Editor",
-      description:
-        "Full-featured text editor integrated within a time management platform, supporting advanced formatting and collaboration features.",
-      technologies: ["React", "TypeScript", "Rich Text Editor", "Auto-save"],
-      highlights: [
-        "Built robust multi-functional text editor from scratch",
-        "Implemented auto-save functionality to prevent data loss",
-        "Added content tagging and formatting features",
-        "Integrated with time tracking and project management tools",
-      ],
-    },
-    {
-      title: "Personal Portfolio Website",
-      description:
-        "Modern, responsive portfolio website built with React and TypeScript, showcasing projects and technical skills.",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-      githubUrl: "https://github.com/Ganes769",
-      liveUrl: "https://www.sagar41.com.np",
-      highlights: [
-        "Designed and developed fully responsive portfolio from scratch",
-        "Implemented modern UI/UX principles with Tailwind CSS",
-        "Optimised for performance and SEO",
-        "Deployed using GitHub Pages with CI/CD pipeline",
       ],
     },
   ];
