@@ -196,27 +196,7 @@ const projects: Project[] = [
     ],
     accent: "violet",
   },
-  {
-    title: "Time Management System & Rich Text Editor",
-    tagline: "Productivity and content creation in one place",
-    description:
-      "Full-featured time management platform with a robust, multi-functional rich text editor. Supports formatting, auto-save, and content tagging—improving user experience and data management.",
-    type: "Web App",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Rich Text Editor",
-      "Auto-save",
-      "State Management",
-    ],
-    highlights: [
-      "Multi-functional text editor built from scratch",
-      "Auto-save and content tagging to prevent data loss",
-      "Improved UX and data management for teams",
-      "Component-based architecture and Git version control",
-    ],
-    accent: "emerald",
-  },
+
   {
     title: "Job Recommendation System",
     tagline: "Next.js + Reed API · 10% CTR improvement",
@@ -232,23 +212,6 @@ const projects: Project[] = [
     ],
     metric: "10% CTR ↑",
     accent: "amber",
-  },
-  {
-    title: "Personal Portfolio",
-    tagline: "UK early-career focused · Single-page",
-    description:
-      "Responsive, single-page portfolio built with React and TypeScript, tailored for the UK job market. Modern UI, scroll-triggered animations, and SEO optimised for discoverability.",
-    type: "Portfolio",
-    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite"],
-    githubUrl: "https://github.com/Ganes769",
-    liveUrl: "https://www.sagar41.com.np",
-    highlights: [
-      "Fully responsive single-page layout with smooth scroll",
-      "Fade-in-up animations and UK-focused copy",
-      "Performance and SEO optimised; deployed via GitHub Pages",
-      "Clear sections: Intro, Skills, Experience, Projects, Contact",
-    ],
-    accent: "sky",
   },
 ];
 
@@ -427,7 +390,8 @@ export default function SinglePage() {
                 Education
               </h2>
               <p className="text-gray-600 mb-8">
-                Academic background in computer science and software development.
+                Academic background in computer science and software
+                development.
               </p>
             </div>
           </ScrollFadeInUp>

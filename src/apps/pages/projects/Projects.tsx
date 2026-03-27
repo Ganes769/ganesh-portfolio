@@ -22,6 +22,7 @@ export default function Projects() {
         "Qdrant",
         "sentence-transformers",
         "Ollama",
+
         "AI",
         "LLM",
       ],
